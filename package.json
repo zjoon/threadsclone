@@ -3,18 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
+  "scripts": {
     "dev": "concurrently --kill-others \"nodemon app.js\" \"vite\""
   },
   "keywords": [],
   "type": "module",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",
+    "concurrently": "^10.0.6",
+    "nodemon": "^3.1.14",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjoon/threadsclone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zjoon/threadsclone/issues"
+  },
+  "homepage": "https://github.com/zjoon/threadsclone#readme",
+  "author": "",
+  "license": "ISC"
 }

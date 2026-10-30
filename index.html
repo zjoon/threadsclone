@@ -1,12 +1,78 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Threads Clone</title>
-    <script type="module" src="/src/main.js"></script>
-  </head>
-  <body class="bg-black">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X-Clone</title>
+  <script type="module" src="/src/main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="bg-white">
+<div class="x-scrollbar flex flex-col pt-4 pl-10 pr-2 w-80 h-screen overflow-y-auto overflow-x-hidden sticky top-0 firstdiv">
+    <nav>
+      <img src="logo.png" alt="X Logo"
+        class="transition duration-300 cursor-pointer w-9 h-9 rounded-3xl hover:bg-gray-200" />
+      <ul class="flex flex-col text-xl mt-3 cursor-pointer">
+        <li class="w-40 p-2 duration-300 rounded-full h-13  hover:bg-gray-200">
+          <i class="text-3xl ri-home-fill"></i>
+          &nbsp; &nbsp;Home
+        </li>
+        <li class="w-40 p-2  duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-search-line"></i>
+          &nbsp; &nbsp;Explore
+        </li>
+        <li class="w-48 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-notification-4-line"></i>&nbsp;&nbsp;&nbsp;Notifications
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-user-follow-line"></i>
+          &nbsp; &nbsp;Follow
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-chat-1-line"></i>
+          &nbsp; &nbsp;Chat
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-grok-ai-line"></i>
+          &nbsp; &nbsp;Grok
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-user-line"></i>
+          &nbsp; &nbsp;Profile
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-more-line"></i>
+          &nbsp; &nbsp;More
+        </li>
+
+        <button
+          class="h-12 mt-2 mr-40 text-lg font-bold text-white transition duration-300 bg-black rounded-full cursor-pointer w-55 hover:bg-gray-800">
+          Post
+        </button>
+
+      </ul>
+      <div
+        class="flex items-center gap-1 p-4 mt-4 transition duration-300 rounded-full cursor-pointer user hover:bg-gray-200 w-60 h-14">
+        <img src="user.png" alt="X user" class="cursor-pointer w-15 h-15 rounded-3xl" />
+        <div class="userinfo">
+          <h3 class="font-bold">John Doe</h3>
+          <p class="text-gray-500">@johndoe</p>
+        </div>
+        &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;
+        <i class="text-3lg ri-more-line"></i>
+      </div>
   
-  </body>
+    </nav>
+
+    
+
+  </div>
+
+</body>
+
 </html>
+
+
+
