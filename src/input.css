@@ -1,2 +1,37 @@
 /* src/index.css */
 @import "tailwindcss";
+
+@layer utilities {
+  .x-scrollbar::-webkit-scrollbar {
+    width: 16px;
+  }
+  .x-scrollbar::-webkit-scrollbar:horizontal {
+    display: none;
+  }
+  .x-scrollbar::-webkit-scrollbar-track {
+    background: #f1f3f5;
+  }
+  .x-scrollbar::-webkit-scrollbar-thumb {
+    background: #b4c6d6;
+    border-radius: 9999px;
+    border: 3px solid #f1f3f5;
+  }
+  .x-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9db3c6;
+  }
+
+  /* top and bottom arrows */
+  .x-scrollbar::-webkit-scrollbar-button:single-button {
+    height: 16px;
+    background-color: #f1f3f5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+  }
+  .x-scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M0 6L4 2L8 6Z' fill='%23a3a3a3'/%3E%3C/svg%3E");
+  }
+  .x-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M0 2L4 6L8 2Z' fill='%23a3a3a3'/%3E%3C/svg%3E");
+  }
+}
