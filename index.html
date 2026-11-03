@@ -1,78 +1,176 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X-Clone</title>
+    <link rel="shortcut icon" href="//abs.twimg.com/favicons/twitter.3.ico" />
+    <script type="module" src="/src/main.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>X-Clone</title>
-  <script type="module" src="/src/main.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
+  <body class="bg-white">
+    <div
+      class="x-scrollbar flex flex-col pt-4 pl-10 pr-2 w-80 h-screen overflow-y-auto overflow-x-hidden sticky top-0 firstdiv"
+    >
+      <nav>
+        <div
+          class="x h-13 w-13 p-2 transition duration-300 cursor-pointer rounded-full hover:bg-gray-200"
+        >
+          <img src="logo.png" alt="X Logo" class="w-9 h-9" />
+        </div>
 
-<body class="bg-white">
-<div class="x-scrollbar flex flex-col pt-4 pl-10 pr-2 w-80 h-screen overflow-y-auto overflow-x-hidden sticky top-0 firstdiv">
-    <nav>
-      <img src="logo.png" alt="X Logo"
-        class="transition duration-300 cursor-pointer w-9 h-9 rounded-3xl hover:bg-gray-200" />
-      <ul class="flex flex-col text-xl mt-3 cursor-pointer">
-        <li class="w-40 p-2 duration-300 rounded-full h-13  hover:bg-gray-200">
-          <i class="text-3xl ri-home-fill"></i>
-          &nbsp; &nbsp;Home
-        </li>
-        <li class="w-40 p-2  duration-300 rounded-full hover:bg-gray-200 h-13">
-          <i class="text-3xl ri-search-line"></i>
-          &nbsp; &nbsp;Explore
-        </li>
-        <li class="w-48 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
-          <i class="text-3xl ri-notification-4-line"></i>&nbsp;&nbsp;&nbsp;Notifications
-        </li>
-        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
-          <i class="text-3xl ri-user-follow-line"></i>
-          &nbsp; &nbsp;Follow
-        </li>
-        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
-          <i class="text-3xl ri-chat-1-line"></i>
-          &nbsp; &nbsp;Chat
-        </li>
-        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
-          <i class="text-3xl ri-grok-ai-line"></i>
-          &nbsp; &nbsp;Grok
-        </li>
-        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
-          <i class="text-3xl ri-user-line"></i>
-          &nbsp; &nbsp;Profile
-        </li>
-        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
-          <i class="text-3xl ri-more-line"></i>
-          &nbsp; &nbsp;More
-        </li>
+        <ul class="flex flex-col text-xl mt-3 cursor-pointer">
+          <li
+            class="w-40 p-2 duration-300 rounded-full h-13 hover:bg-gray-200 font-bold"
+          >
+            <div
+              class="dot rounded-full bg-[#1D9BF0] h-2 w-2 absolute left-17"
+            ></div>
+            <i class="text-3xl ri-home-fill"></i>
+            &nbsp; &nbsp;Home
+          </li>
+          <li class="w-40 p-2 duration-300 rounded-full hover:bg-gray-200 h-13">
+            <i class="text-3xl ri-search-line"></i>
+            &nbsp; &nbsp;Explore
+          </li>
+          <li
+            class="w-48 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
+          >
+            <i class="text-3xl ri-notification-4-line"></i
+            >&nbsp;&nbsp;&nbsp;Notifications
+          </li>
+          <li
+            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
+          >
+            <i class="text-3xl ri-user-follow-line"></i>
+            &nbsp; &nbsp;Follow
+          </li>
+          <li
+            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
+          >
+            <i class="text-3xl ri-chat-1-line"></i>
+            &nbsp; &nbsp;Chat
+          </li>
+          <li
+            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
+          >
+            <div
+              class="dot rounded-full bg-[#1D9BF0] h-2 w-2 absolute left-19"
+            ></div>
+            <i class="text-3xl ri-grok-ai-line"></i>
+            &nbsp; &nbsp;Grok
+          </li>
+          <li
+            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
+          >
+            <i class="text-3xl ri-user-line"></i>
+            &nbsp; &nbsp;Profile
+          </li>
+          <li
+            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
+          >
+            <i class="text-3xl ri-more-line"></i>
+            &nbsp; &nbsp;More
+          </li>
+
+          <button
+            class="h-12 mt-2 mr-40 text-lg font-bold text-white transition duration-300 bg-black rounded-full cursor-pointer w-55 hover:bg-gray-800"
+          >
+            Post
+          </button>
+        </ul>
+        <div
+          class="flex items-center gap-1 p-4 mt-4 transition duration-300 rounded-full cursor-pointer user hover:bg-gray-200 w-60 h-14"
+        >
+          <img
+            src="user.png"
+            alt="X user"
+            class="cursor-pointer w-15 h-15 rounded-3xl"
+          />
+          <div class="userinfo">
+            <h3 class="font-bold">John Doe</h3>
+            <p class="text-gray-500">@johndoe</p>
+          </div>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <i class="text-3lg ri-more-line"></i>
+        </div>
+      </nav>
+    </div>
+
+    <div class="second absolute top-0 left-80">
+      <div class="faf flex items-center">
+        <div
+          class="foryou h-14 w-65 p-7 px-10 py-4 text-center hover:bg-gray-200 cursor-pointer transition duration-300 text-bold relative font-bold"
+        >
+          For you
+          <div
+            class="dot h-1 w-14 bg-[#1D9BF0] absolute left-25 bottom-0 rounded-full"
+          ></div>
+        </div>
+        <div
+          class="following h-14 w-65 p-7 px-10 py-4 text-center text-[#536471] hover:bg-gray-200 cursor-pointer transition duration-300"
+        >
+          Following
+        </div>
+        <div
+          class="plus h-12 w-10 transition duration-300 hover:bg-gray-200 py-3 text-center"
+        >
+          <i class="ri-add-line"></i>
+        </div>
+      </div>
+
+      <div class="line1 h-1 w-140 bg-[#FAFAFA] absolute left-0"></div>
+
+      <div class="whatsnew flex mt-3">
+        <img
+          src="user.png"
+          alt="X user"
+          class="cursor-pointer w-15 h-15 rounded-3xl"
+        />
+
+        <h2 class="text-[20px] font-sans text-[#536471] mt-3">
+          What's Happening?
+        </h2>
+      </div>
+      <div
+        class="icons flex gap-4 mt-3 text-[#9db3c6] absolute left-13 text-2xl"
+      >
+        <div class="img"><i class="ri-image-2-line"></i></div>
+        <div class="gif"><i class="ri-file-gif-line"></i></div>
+        <div class="grock"><i class="ri-grok-ai-line"></i></div>
+        <div class="poll"><i class="ri-chat-poll-line"></i></div>
+        <div class="imoji"><i class="ri-emotion-happy-line"></i></div>
+        <div class="schecudle"><i class="ri-calendar-schedule-line"></i></div>
+        <div class="loc"><i class="ri-map-pin-line"></i></div>
+        <div class="flag"><i class="ri-flag-2-line"></i></div>
 
         <button
-          class="h-12 mt-2 mr-40 text-lg font-bold text-white transition duration-300 bg-black rounded-full cursor-pointer w-55 hover:bg-gray-800">
+          class="h-10 mt-0 mr-40 text-base font-bold text-white bg-[#C2C5C4] rounded-full cursor-pointer w-19 absolute left-105"
+        >
           Post
         </button>
-
-      </ul>
-      <div
-        class="flex items-center gap-1 p-4 mt-4 transition duration-300 rounded-full cursor-pointer user hover:bg-gray-200 w-60 h-14">
-        <img src="user.png" alt="X user" class="cursor-pointer w-15 h-15 rounded-3xl" />
-        <div class="userinfo">
-          <h3 class="font-bold">John Doe</h3>
-          <p class="text-gray-500">@johndoe</p>
-        </div>
-        &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;
-        <i class="text-3lg ri-more-line"></i>
       </div>
-  
-    </nav>
 
-    
+      <div class="mt-15 h-1 w-140 bg-[#FAFAFA] absolute left-0"></div>
 
-  </div>
-
-</body>
-
+      <div
+        class="mt-15 transition duration-300 cursor-pointer user hover:bg-gray-200 w-140 h-100"
+      >
+        <div class="userinfo p-4 flex items-center gap-1">
+          <img src="cnn.jpg" alt="X user" class="cursor-pointer w-15 h-15" />
+          <h3 class="font-bold hover:underline">CNN</h3>
+          <i class="ri-verified-badge-fill text-[#E2B719]"></i>
+          <p class="text-gray-500 hover:underline">@CNN . 7h</p>
+          <div class="leftsec flex gap-2 absolute left-120">
+            <div class="ho h-8 w-8  p-1 hover:bg-blue-300  rounded-full transition duration-300"><i class="ri-grok-ai-line  hover:text-blue-400 transition duration-300"></i></div>
+            <div class="over h-8 w-8  p-1 hover:bg-blue-300  rounded-full transition duration-300"><i class="text-3lg ri-more-line  hover:text-blue-400 transition duration-300"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
-
-
-
