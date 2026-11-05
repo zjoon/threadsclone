@@ -125,11 +125,11 @@
 
       <div class="line1 h-1 w-140 bg-[#FAFAFA] absolute left-0"></div>
 
-      <div class="whatsnew flex mt-3">
+      <div class="whatsnew flex mt-2">
         <img
           src="user.png"
           alt="X user"
-          class="cursor-pointer w-15 h-15 rounded-3xl"
+          class="w-15 h-15 rounded-full object-cover cursor-pointer transition duration-300 hover:brightness-75"
         />
 
         <h2 class="text-[20px] font-sans text-[#536471] mt-3">
@@ -137,19 +137,67 @@
         </h2>
       </div>
       <div
-        class="icons flex gap-4 mt-3 text-[#9db3c6] absolute left-13 text-2xl"
+        class="icons cursor-pointer flex gap-1 mt-3 text-[#9db3c6] absolute left-13 text-2xl"
       >
-        <div class="img"><i class="ri-image-2-line"></i></div>
-        <div class="gif"><i class="ri-file-gif-line"></i></div>
-        <div class="grock"><i class="ri-grok-ai-line"></i></div>
-        <div class="poll"><i class="ri-chat-poll-line"></i></div>
-        <div class="imoji"><i class="ri-emotion-happy-line"></i></div>
-        <div class="schecudle"><i class="ri-calendar-schedule-line"></i></div>
-        <div class="loc"><i class="ri-map-pin-line"></i></div>
-        <div class="flag"><i class="ri-flag-2-line"></i></div>
+        <div
+          class="h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-image-2-line  group-hover:text-[#697A86] "
+          ></i>
+        </div>
+        <div
+          class="gif h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-file-gif-line ease-out transition duration-300 group-hover:text-[#697A86] "
+          ></i>
+        </div>
+        <div
+          class="grock h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-grok-ai-line ease-out transition duration-300 group-hover:text-[#697A86] "
+          ></i>
+        </div>
+        <div
+          class="poll h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-chat-poll-line ease-out transition duration-300 group-hover:text-[#697A86] "
+          ></i>
+        </div>
+        <div
+          class="imoji h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-emotion-happy-line ease-out transition duration-300 group-hover:text-[#697A86] "
+          ></i>
+        </div>
+        <div
+          class="schecudle h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-calendar-schedule-line ease-out transition duration-300 group-hover:text-[#697A86] "
+          ></i>
+        </div>
+        <div
+          class="loc h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-map-pin-line ease-out transition duration-300 group-hover:text-[#697A86] "
+          ></i>
+        </div>
+        <div
+          class="flag h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
+        >
+          <i
+            class="ri-flag-2-line ease-out transition duration-300 group-hover:text-[#697A86] "
+          ></i>
+        </div>
 
         <button
-          class="h-10 mt-0 mr-40 text-base font-bold text-white bg-[#C2C5C4] rounded-full cursor-pointer w-19 absolute left-105"
+          class="h-10 mt-0 mr-40 text-base font-bold text-white bg-[#C2C5C4] rounded-full w-19 absolute left-105"
         >
           Post
         </button>
@@ -160,14 +208,41 @@
       <div
         class="mt-15 transition duration-300 cursor-pointer user hover:bg-gray-200 w-140 h-100"
       >
-        <div class="userinfo p-4 flex items-center gap-1">
-          <img src="cnn.jpg" alt="X user" class="cursor-pointer w-15 h-15" />
-          <h3 class="font-bold hover:underline">CNN</h3>
-          <i class="ri-verified-badge-fill text-[#E2B719]"></i>
-          <p class="text-gray-500 hover:underline">@CNN . 7h</p>
-          <div class="leftsec flex gap-2 absolute left-120">
-            <div class="ho h-8 w-8  p-1 hover:bg-blue-300  rounded-full transition duration-300"><i class="ri-grok-ai-line  hover:text-blue-400 transition duration-300"></i></div>
-            <div class="over h-8 w-8  p-1 hover:bg-blue-300  rounded-full transition duration-300"><i class="text-3lg ri-more-line  hover:text-blue-400 transition duration-300"></i></div>
+        <div class="userinfo p-3">
+          <img
+            src="cnn.jpg"
+            alt="X user"
+            class="cursor-pointer rounded-sm w-10 h-10"
+          />
+          <div class="up flex items-center gap-1 absolute top-50 left-15">
+            <h3 class="font-bold hover:underline">CNN</h3>
+            <i class="ri-verified-badge-fill text-[#E2B719]"></i>
+            <p class="text-gray-500 hover:underline">@CNN</p>
+            <p class="text-gray-500">. 7h</p>
+          </div>
+
+          <div class="leftsec flex items-center absolute top-50 left-120">
+            <!-- 1. Grok Icon -->
+
+            <!-- YEH PARENT DIV LAGAYA HAI -->
+
+            <!-- 1. Grok Icon -->
+            <div
+              class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+            >
+              <i
+                class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+              ></i>
+            </div>
+
+            <!-- 2. More Icon -->
+            <div
+              class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+            >
+              <i
+                class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+              ></i>
+            </div>
           </div>
         </div>
       </div>
