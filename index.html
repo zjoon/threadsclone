@@ -101,7 +101,9 @@
       </nav>
     </div>
 
-    <div class="second absolute top-0 left-80">
+    <div
+      class="second absolute top-0 left-80 h-screen w-[600px] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+     >
       <div class="faf flex items-center">
         <div
           class="foryou h-14 w-65 p-7 px-10 py-4 text-center hover:bg-gray-200 cursor-pointer transition duration-300 text-bold relative font-bold"
@@ -204,63 +206,406 @@
       <div class="mt-15 h-1 w-140 bg-[#FAFAFA] absolute left-0"></div>
 
       <div
-        class="mt-15 transition duration-300 cursor-pointer user hover:bg-gray-200 w-140 h-100"
+        class="mt-15 transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4"
       >
-        <div class="userinfo p-3">
+        <div class="userinfo p-3 flex gap-3 relative">
+          <!-- Profile Image -->
           <img
             src="cnn.jpg"
             alt="X user"
-            class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-sm w-10 h-10"
+            class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-sm w-10 h-10 shrink-0"
           />
-          <div class="up flex items-center gap-1 absolute top-50 left-15">
-            <h3 class="font-bold hover:underline">CNN</h3>
-            <i class="ri-verified-badge-fill text-[#E2B719]"></i>
-            <p class="text-gray-500 hover:underline">@CNN</p>
-            <p class="text-gray-500">. 7h</p>
-          </div>
 
-          <div class="leftsec flex items-center absolute top-50 left-120">
-            <!-- 1. Grok Icon -->
+          <!-- Content Area -->
+          <div class="flex-1">
+            <!-- Top Row (Name, Username, Time, Icons) -->
+            <div class="flex justify-between items-start w-full">
+              <div class="up flex items-center gap-1">
+                <h3 class="font-bold hover:underline">CNN</h3>
+                <i class="ri-verified-badge-fill text-[#E2B719]"></i>
+                <p class="text-gray-500 hover:underline">@CNN</p>
+                <p class="text-gray-500">. 7h</p>
+              </div>
 
-            <!-- YEH PARENT DIV LAGAYA HAI -->
-
-            <!-- 1. Grok Icon -->
-            <div
-              class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-            >
-              <i
-                class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-              ></i>
+              <div class="leftsec flex items-center">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+                  ></i>
+                </div>
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+                  ></i>
+                </div>
+              </div>
             </div>
 
-            <!-- 2. More Icon -->
+            <!-- Tweet Text -->
+            <p class="text-[15px] mt-1">
+              Lula says Flávio is a "jinx" and that the senator went to the US
+              to seek "protection"
+            </p>
+
+            <!-- Tweet Image -->
+            <img
+              src="cnnpic.jpg"
+              alt="X user"
+              class="cursor-pointer rounded-2xl w-full h-auto mt-3"
+            />
+
+            <!-- Bottom Icons -->
             <div
-              class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+              class="endicons mt-3 flex items-center justify-between text-[#536470]"
             >
-              <i
-                class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-              ></i>
+              <!-- Left Icons -->
+              <div class="flex items-center gap-8">
+                <div
+                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-chat-1-line text-[18px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">137</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 text-[18px] ri-arrow-up-down-line"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">43</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-heart-line text-[17px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">1K</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-bar-chart-line text-[17px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">627K</span>
+                </div>
+              </div>
+
+              <!-- Right Icons -->
+              <div class="flex items-center gap-1">
+                <div
+                  class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"
+                  ></i>
+                </div>
+                <div
+                  class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"
+                  ></i>
+                </div>
+              </div>
             </div>
           </div>
-          <p class="top-58 text-[15px] left-15 absolute">
-            Lula says Flávio is a "jinx" and that the senator went to the US to
-            seek "protection"
-          </p>
-          <img
-            src="cnnpic.jpg"
-            alt="X user"
-            class="cursor-pointer rounded-2xl w-120 h-65 mt-10 top-63 left-15 absolute"
-          />
-        </div>
-        <div class="endicons">
-          <i class="ri-chat-1-line"></i>
-          <i class="ri-arrow-up-down-line"></i>
-          <i class="ri-heart-line"></i>
-          <i class="ri-bar-chart-line"></i>
-          <i class="ri-bookmark-line"></i>
-          <i class="ri-upload-2-line"></i>
         </div>
       </div>
+      <div
+        class="transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4 "
+      >
+        <div class="userinfo p-3 flex gap-3 relative">
+          <!-- Profile Image -->
+          <img
+            src="bbc.jpg"
+            alt="X user"
+            class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-sm w-10 h-10 shrink-0"
+          />
+
+          <!-- Content Area -->
+          <div class="flex-1">
+            <!-- Top Row (Name, Username, Time, Icons) -->
+            <div class="flex justify-between items-start w-full">
+              <div class="up flex items-center gap-1">
+                <h3 class="font-bold hover:underline">BBC Breaking News</h3>
+                <i class="ri-verified-badge-fill text-[#E2B719]"></i>
+                <p class="text-gray-500 hover:underline">@BBC breaking</p>
+                <p class="text-gray-500">. 22h</p>
+              </div>
+
+              <div class="leftsec flex items-center">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+                  ></i>
+                </div>
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tweet Text -->
+            <p class="text-[15px] mt-1">
+           US President Donald Trump names Stephen Miller as new White House chief of staff after Republicans suffer heavy midterm losses
+            </p>
+
+            <!-- Tweet Image -->
+            <img
+              src="secondcnn.jpg"
+              alt="X user"
+              class="cursor-pointer rounded-2xl w-full h-auto mt-3"
+            />
+
+            <!-- Bottom Icons -->
+            <div
+              class="endicons mt-3 flex items-center justify-between text-[#536470]"
+            >
+              <!-- Left Icons -->
+              <div class="flex items-center gap-8">
+                <div
+                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-chat-1-line text-[18px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">288</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 text-[18px] ri-arrow-up-down-line"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">216</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-heart-line text-[17px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">562</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-bar-chart-line text-[17px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">712K</span>
+                </div>
+              </div>
+
+              <!-- Right Icons -->
+              <div class="flex items-center gap-1">
+                <div
+                  class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"
+                  ></i>
+                </div>
+                <div
+                  class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div
+        class=" transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4"
+      >
+        <div class="userinfo p-3 flex gap-3 relative">
+          <!-- Profile Image -->
+          <img
+            src="ai.jpg"
+            alt="X user"
+            class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-full w-10 h-10 shrink-0"
+          />
+
+          <!-- Content Area -->
+          <div class="flex-1">
+            <!-- Top Row (Name, Username, Time, Icons) -->
+            <div class="flex justify-between items-start w-full">
+              <div class="up flex items-center gap-1">
+                <h3 class="font-bold hover:underline">Ai Video Explorer</h3>
+                <i class="ri-verified-badge-fill text-blue-600"></i>
+                <p class="text-gray-500 hover:underline">@AiVideoEx</p>
+                <p class="text-gray-500">. 7h</p>
+              </div>
+
+              <div class="leftsec flex items-center">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+                  ></i>
+                </div>
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tweet Text -->
+            <p class="text-[15px] mt-1">
+           <p> Calm Ambient — Four Seasons Drift Through a Tiny Valley </p>
+           <br>
+        
+            Calm ambient slow TV: three minutes drifting through one tiny valley as spring, summer, autumn and winter pass by.
+            </p>
+
+            <!-- Tweet Image -->
+            <img
+              src="aii.jpg"
+              alt="X user"
+              class="cursor-pointer rounded-2xl w-full h-auto mt-3"
+            />
+
+            <!-- Bottom Icons -->
+            <div
+              class="endicons mt-3 flex items-center justify-between text-[#536470]"
+            >
+              <!-- Left Icons -->
+              <div class="flex items-center gap-8">
+                <div
+                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-chat-1-line text-[18px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">17</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 text-[18px] ri-arrow-up-down-line"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">433</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-heart-line text-[17px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">4K</span>
+                </div>
+
+                <div
+                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
+                >
+                  <div
+                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
+                  >
+                    <i
+                      class="transition duration-300 ri-bar-chart-line text-[17px]"
+                    ></i>
+                  </div>
+                  <span class="text-[14px]">67K</span>
+                </div>
+              </div>
+
+              <!-- Right Icons -->
+              <div class="flex items-center gap-1">
+                <div
+                  class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"
+                  ></i>
+                </div>
+                <div
+                  class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
+                >
+                  <i
+                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
     </div>
   </body>
 </html>
