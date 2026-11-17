@@ -1,611 +1,483 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>X-Clone</title>
-    <link rel="shortcut icon" href="//abs.twimg.com/favicons/twitter.3.ico" />
-    <script type="module" src="/src/main.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body class="bg-white">
-    <div
-      class="x-scrollbar flex flex-col pt-4 pl-10 pr-2 w-80 h-screen overflow-y-auto overflow-x-hidden sticky top-0 firstdiv"
-    >
-      <nav>
-        <div
-          class="x h-13 w-13 p-2 transition duration-300 cursor-pointer rounded-full hover:bg-gray-200"
-        >
-          <img src="logo.png" alt="X Logo" class="w-9 h-9" />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X-Clone</title>
+  <link rel="shortcut icon" href="//abs.twimg.com/favicons/twitter.3.ico" />
+  <script type="module" src="/src/main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
 
-        <ul class="flex flex-col text-xl mt-3 cursor-pointer">
-          <li
-            class="w-40 p-2 duration-300 rounded-full h-13 hover:bg-gray-200 font-bold"
-          >
-            <div
-              class="dot rounded-full bg-[#1D9BF0] h-2 w-2 absolute left-17"
-            ></div>
-            <i class="text-3xl ri-home-fill"></i>
-            &nbsp; &nbsp;Home
-          </li>
-          <li class="w-40 p-2 duration-300 rounded-full hover:bg-gray-200 h-13">
-            <i class="text-3xl ri-search-line"></i>
-            &nbsp; &nbsp;Explore
-          </li>
-          <li
-            class="w-48 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
-          >
-            <i class="text-3xl ri-notification-4-line"></i
-            >&nbsp;&nbsp;&nbsp;Notifications
-          </li>
-          <li
-            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
-          >
-            <i class="text-3xl ri-user-follow-line"></i>
-            &nbsp; &nbsp;Follow
-          </li>
-          <li
-            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
-          >
-            <i class="text-3xl ri-chat-1-line"></i>
-            &nbsp; &nbsp;Chat
-          </li>
-          <li
-            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
-          >
-            <div
-              class="dot rounded-full bg-[#1D9BF0] h-2 w-2 absolute left-19"
-            ></div>
-            <i class="text-3xl ri-grok-ai-line"></i>
-            &nbsp; &nbsp;Grok
-          </li>
-          <li
-            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
-          >
-            <i class="text-3xl ri-user-line"></i>
-            &nbsp; &nbsp;Profile
-          </li>
-          <li
-            class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13"
-          >
-            <i class="text-3xl ri-more-line"></i>
-            &nbsp; &nbsp;More
-          </li>
-
-          <button
-            class="h-12 mt-2 mr-40 text-lg font-bold text-white transition duration-300 bg-black rounded-full cursor-pointer w-55 hover:bg-gray-800"
-          >
-            Post
-          </button>
-        </ul>
-        <div
-          class="flex items-center gap-1 p-4 mt-4 transition duration-300 rounded-full cursor-pointer user hover:bg-gray-200 w-60 h-14"
-        >
-          <img
-            src="user.png"
-            alt="X user"
-            class="cursor-pointer w-15 h-15 rounded-3xl"
-          />
-          <div class="userinfo">
-            <h3 class="font-bold">John Doe</h3>
-            <p class="text-gray-500">@johndoe</p>
-          </div>
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          <i class="text-3lg ri-more-line"></i>
-        </div>
-      </nav>
-    </div>
-
-    <div
-      class="second absolute top-0 left-80 h-screen w-[600px] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-     >
-      <div class="faf flex items-center">
-        <div
-          class="foryou h-14 w-65 p-7 px-10 py-4 text-center hover:bg-gray-200 cursor-pointer transition duration-300 text-bold relative font-bold"
-        >
-          For you
-          <div
-            class="dot h-1 w-14 bg-[#1D9BF0] absolute left-25 bottom-0 rounded-full"
-          ></div>
-        </div>
-        <div
-          class="following h-14 w-65 p-7 px-10 py-4 text-center text-[#536471] hover:bg-gray-200 cursor-pointer transition duration-300"
-        >
-          Following
-        </div>
-        <div
-          class="plus h-12 w-10 transition duration-300 hover:bg-gray-200 py-3 text-center"
-        >
-          <i class="ri-add-line"></i>
-        </div>
+<body class="bg-white">
+  <div
+    class="x-scrollbar flex flex-col pt-4 pl-10 pr-2 w-80 h-screen overflow-y-auto overflow-x-hidden sticky top-0 firstdiv">
+    <nav>
+      <div class="x h-13 w-13 p-2 transition duration-300 cursor-pointer rounded-full hover:bg-gray-200">
+        <img src="logo.png" alt="X Logo" class="w-9 h-9" />
       </div>
 
-      <div class="line1 h-1 w-140 bg-[#FAFAFA] absolute left-0"></div>
-
-      <div class="whatsnew flex mt-2">
-        <img
-          src="user.png"
-          alt="X user"
-          class="w-15 h-15 rounded-full object-cover cursor-pointer transition duration-300 hover:brightness-75"
-        />
-
-        <h2 class="text-[20px] font-sans text-[#536471] mt-3">
-          What's Happening?
-        </h2>
-      </div>
-      <div
-        class="icons cursor-pointer flex gap-1 mt-3 text-[#9db3c6] absolute left-13 text-2xl"
-      >
-        <div
-          class="h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i class="ri-image-2-line group-hover:text-[#697A86]"></i>
-        </div>
-        <div
-          class="gif h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i
-            class="ri-file-gif-line ease-out transition duration-300 group-hover:text-[#697A86]"
-          ></i>
-        </div>
-        <div
-          class="grock h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i
-            class="ri-grok-ai-line ease-out transition duration-300 group-hover:text-[#697A86]"
-          ></i>
-        </div>
-        <div
-          class="poll h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i
-            class="ri-chat-poll-line ease-out transition duration-300 group-hover:text-[#697A86]"
-          ></i>
-        </div>
-        <div
-          class="imoji h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i
-            class="ri-emotion-happy-line ease-out transition duration-300 group-hover:text-[#697A86]"
-          ></i>
-        </div>
-        <div
-          class="schecudle h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i
-            class="ri-calendar-schedule-line ease-out transition duration-300 group-hover:text-[#697A86]"
-          ></i>
-        </div>
-        <div
-          class="loc h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i
-            class="ri-map-pin-line ease-out transition duration-300 group-hover:text-[#697A86]"
-          ></i>
-        </div>
-        <div
-          class="flag h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group"
-        >
-          <i
-            class="ri-flag-2-line ease-out transition duration-300 group-hover:text-[#697A86]"
-          ></i>
-        </div>
+      <ul class="flex flex-col text-xl mt-3 cursor-pointer">
+        <li class="w-40 p-2 duration-300 rounded-full h-13 hover:bg-gray-200 font-bold">
+          <div class="dot rounded-full bg-[#1D9BF0] h-2 w-2 absolute left-17"></div>
+          <i class="text-3xl ri-home-fill"></i>
+          &nbsp; &nbsp;Home
+        </li>
+        <li class="w-40 p-2 duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-search-line"></i>
+          &nbsp; &nbsp;Explore
+        </li>
+        <li class="w-48 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-notification-4-line"></i>&nbsp;&nbsp;&nbsp;Notifications
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-user-follow-line"></i>
+          &nbsp; &nbsp;Follow
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-chat-1-line"></i>
+          &nbsp; &nbsp;Chat
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <div class="dot rounded-full bg-[#1D9BF0] h-2 w-2 absolute left-19"></div>
+          <i class="text-3xl ri-grok-ai-line"></i>
+          &nbsp; &nbsp;Grok
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-user-line"></i>
+          &nbsp; &nbsp;Profile
+        </li>
+        <li class="w-35 p-2 transition duration-300 rounded-full hover:bg-gray-200 h-13">
+          <i class="text-3xl ri-more-line"></i>
+          &nbsp; &nbsp;More
+        </li>
 
         <button
-          class="h-10 mt-0 mr-40 text-base font-bold text-white bg-[#C2C5C4] rounded-full w-19 absolute left-105"
-        >
+          class="h-12 mt-2 mr-40 text-lg font-bold text-white transition duration-300 bg-black rounded-full cursor-pointer w-55 hover:bg-gray-800">
           Post
         </button>
+      </ul>
+      <div
+        class="flex items-center gap-1 p-4 mt-4 transition duration-300 rounded-full cursor-pointer user hover:bg-gray-200 w-60 h-14">
+        <img src="user.png" alt="X user" class="cursor-pointer w-15 h-15 rounded-3xl" />
+        <div class="userinfo">
+          <h3 class="font-bold">John Doe</h3>
+          <p class="text-gray-500">@johndoe</p>
+        </div>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <i class="text-3lg ri-more-line"></i>
       </div>
+    </nav>
+  </div>
 
-      <div class="mt-15 h-1 w-140 bg-[#FAFAFA] absolute left-0"></div>
+  <div
+    class="   border-r-2 border-gray-200 second absolute top-0 left-80 h-screen w-600px overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-none]">
+    <div class="faf sticky top-0 z-50 flex items-center bg-white/80 backdrop-blur-md border-b border-gray-200">
 
       <div
-        class="mt-15 transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4"
-      >
-        <div class="userinfo p-3 flex gap-3 relative">
-          <!-- Profile Image -->
-          <img
-            src="cnn.jpg"
-            alt="X user"
-            class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-sm w-10 h-10 shrink-0"
-          />
-
-          <!-- Content Area -->
-          <div class="flex-1">
-            <!-- Top Row (Name, Username, Time, Icons) -->
-            <div class="flex justify-between items-start w-full">
-              <div class="up flex items-center gap-1">
-                <h3 class="font-bold hover:underline">CNN</h3>
-                <i class="ri-verified-badge-fill text-[#E2B719]"></i>
-                <p class="text-gray-500 hover:underline">@CNN</p>
-                <p class="text-gray-500">. 7h</p>
-              </div>
-
-              <div class="leftsec flex items-center">
-                <div
-                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-                  ></i>
-                </div>
-                <div
-                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-                  ></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tweet Text -->
-            <p class="text-[15px] mt-1">
-              Lula says Flávio is a "jinx" and that the senator went to the US
-              to seek "protection"
-            </p>
-
-            <!-- Tweet Image -->
-            <img
-              src="cnnpic.jpg"
-              alt="X user"
-              class="cursor-pointer rounded-2xl w-full h-auto mt-3"
-            />
-
-            <!-- Bottom Icons -->
-            <div
-              class="endicons mt-3 flex items-center justify-between text-[#536470]"
-            >
-              <!-- Left Icons -->
-              <div class="flex items-center gap-8">
-                <div
-                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-chat-1-line text-[18px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">137</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 text-[18px] ri-arrow-up-down-line"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">43</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-heart-line text-[17px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">1K</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-bar-chart-line text-[17px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">627K</span>
-                </div>
-              </div>
-
-              <!-- Right Icons -->
-              <div class="flex items-center gap-1">
-                <div
-                  class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"
-                  ></i>
-                </div>
-                <div
-                  class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        class="foryou h-14 w-65 p-7 px-10 py-4 text-center hover:bg-[#E7E7E8] cursor-pointer transition duration-300 font-bold relative flex items-center justify-center">
+        For you
+        <!-- Blue Dot (Line) ko center kiya hai taake text ke neeche bilkul beech mein aaye -->
+        <div class="dot h-1 w-14 bg-[#1D9BF0] absolute left-1/2 -translate-x-1/2 bottom-0 rounded-full"></div>
       </div>
+
       <div
-        class="transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4 "
-      >
-        <div class="userinfo p-3 flex gap-3 relative">
-          <!-- Profile Image -->
-          <img
-            src="bbc.jpg"
-            alt="X user"
-            class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-sm w-10 h-10 shrink-0"
-          />
-
-          <!-- Content Area -->
-          <div class="flex-1">
-            <!-- Top Row (Name, Username, Time, Icons) -->
-            <div class="flex justify-between items-start w-full">
-              <div class="up flex items-center gap-1">
-                <h3 class="font-bold hover:underline">BBC Breaking News</h3>
-                <i class="ri-verified-badge-fill text-[#E2B719]"></i>
-                <p class="text-gray-500 hover:underline">@BBC breaking</p>
-                <p class="text-gray-500">. 22h</p>
-              </div>
-
-              <div class="leftsec flex items-center">
-                <div
-                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-                  ></i>
-                </div>
-                <div
-                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-                  ></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tweet Text -->
-            <p class="text-[15px] mt-1">
-           US President Donald Trump names Stephen Miller as new White House chief of staff after Republicans suffer heavy midterm losses
-            </p>
-
-            <!-- Tweet Image -->
-            <img
-              src="secondcnn.jpg"
-              alt="X user"
-              class="cursor-pointer rounded-2xl w-full h-auto mt-3"
-            />
-
-            <!-- Bottom Icons -->
-            <div
-              class="endicons mt-3 flex items-center justify-between text-[#536470]"
-            >
-              <!-- Left Icons -->
-              <div class="flex items-center gap-8">
-                <div
-                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-chat-1-line text-[18px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">288</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 text-[18px] ri-arrow-up-down-line"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">216</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-heart-line text-[17px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">562</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-bar-chart-line text-[17px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">712K</span>
-                </div>
-              </div>
-
-              <!-- Right Icons -->
-              <div class="flex items-center gap-1">
-                <div
-                  class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"
-                  ></i>
-                </div>
-                <div
-                  class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        class="following h-14 w-65 p-7 px-10 py-4 text-center text-[#536471] hover:bg-[#E7E7E8] cursor-pointer transition duration-300 flex items-center justify-center">
+        Following
       </div>
-       <div
-        class=" transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4"
-      >
-        <div class="userinfo p-3 flex gap-3 relative">
-          <!-- Profile Image -->
-          <img
-            src="ai.jpg"
-            alt="X user"
-            class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-full w-10 h-10 shrink-0"
-          />
 
-          <!-- Content Area -->
-          <div class="flex-1">
-            <!-- Top Row (Name, Username, Time, Icons) -->
-            <div class="flex justify-between items-start w-full">
-              <div class="up flex items-center gap-1">
-                <h3 class="font-bold hover:underline">Ai Video Explorer</h3>
-                <i class="ri-verified-badge-fill text-blue-600"></i>
-                <p class="text-gray-500 hover:underline">@AiVideoEx</p>
-                <p class="text-gray-500">. 7h</p>
-              </div>
-
-              <div class="leftsec flex items-center">
-                <div
-                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-                  ></i>
-                </div>
-                <div
-                  class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"
-                  ></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tweet Text -->
-            <p class="text-[15px] mt-1">
-           <p> Calm Ambient — Four Seasons Drift Through a Tiny Valley </p>
-           <br>
-        
-            Calm ambient slow TV: three minutes drifting through one tiny valley as spring, summer, autumn and winter pass by.
-            </p>
-
-            <!-- Tweet Image -->
-            <img
-              src="aii.jpg"
-              alt="X user"
-              class="cursor-pointer rounded-2xl w-full h-auto mt-3"
-            />
-
-            <!-- Bottom Icons -->
-            <div
-              class="endicons mt-3 flex items-center justify-between text-[#536470]"
-            >
-              <!-- Left Icons -->
-              <div class="flex items-center gap-8">
-                <div
-                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-chat-1-line text-[18px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">17</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 text-[18px] ri-arrow-up-down-line"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">433</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-heart-line text-[17px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">4K</span>
-                </div>
-
-                <div
-                  class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300"
-                >
-                  <div
-                    class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300"
-                  >
-                    <i
-                      class="transition duration-300 ri-bar-chart-line text-[17px]"
-                    ></i>
-                  </div>
-                  <span class="text-[14px]">67K</span>
-                </div>
-              </div>
-
-              <!-- Right Icons -->
-              <div class="flex items-center gap-1">
-                <div
-                  class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"
-                  ></i>
-                </div>
-                <div
-                  class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100"
-                >
-                  <i
-                    class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div
+        class="plus h-14 w-10 flex items-center justify-center transition duration-300 hover:bg-[#E7E7E8] cursor-pointer">
+        <i class="ri-add-line text-xl"></i>
       </div>
-   
+
     </div>
-  </body>
+
+    <div class="line1 h-1 w-xl bg-gray-200 absolute left-0"></div>
+
+    <div class="whatsnew  flex mt-2">
+      <img src="user.png" alt="X user"
+        class="w-15 h-15 rounded-full object-cover cursor-pointer transition duration-300 hover:brightness-75" />
+
+      <h2 class="text-[20px] font-sans text-[#536471] mt-3">
+        What's Happening?
+      </h2>
+    </div>
+    <div class="icons cursor-pointer flex gap-1 mt-3 text-[#9db3c6] absolute left-13 text-2xl">
+      <div
+        class="h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-image-2-line group-hover:text-[#697A86]"></i>
+      </div>
+      <div
+        class="gif h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-file-gif-line ease-out transition duration-300 group-hover:text-[#697A86]"></i>
+      </div>
+      <div
+        class="grock h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-grok-ai-line ease-out transition duration-300 group-hover:text-[#697A86]"></i>
+      </div>
+      <div
+        class="poll h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-chat-poll-line ease-out transition duration-300 group-hover:text-[#697A86]"></i>
+      </div>
+      <div
+        class="imoji h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-emotion-happy-line ease-out transition duration-300 group-hover:text-[#697A86]"></i>
+      </div>
+      <div
+        class="schecudle h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-calendar-schedule-line ease-out transition duration-300 group-hover:text-[#697A86]"></i>
+      </div>
+      <div
+        class="loc h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-map-pin-line ease-out transition duration-300 group-hover:text-[#697A86]"></i>
+      </div>
+      <div
+        class="flag h-9 w-9 flex items-center justify-center cursor-pointer transition duration-300 rounded-full ease-out hover:bg-gray-200 hover:scale-111 group">
+        <i class="ri-flag-2-line ease-out transition duration-300 group-hover:text-[#697A86]"></i>
+      </div>
+
+      <button class="h-10 mt-0 mr-40 text-base font-bold text-white bg-[#C2C5C4] rounded-full w-19 absolute left-105">
+        Post
+      </button>
+    </div>
+
+    <div class="mt-15 h-1 w-xl bg-gray-200 absolute left-0"></div>
+
+    <div class="mt-15 transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4">
+      <div class="userinfo p-3 flex gap-3 relative">
+        <!-- Profile Image -->
+        <img src="cnn.jpg" alt="X user"
+          class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-sm w-10 h-10 shrink-0" />
+
+        <!-- Content Area -->
+        <div class="flex-1">
+          <!-- Top Row (Name, Username, Time, Icons) -->
+          <div class="flex justify-between items-start w-full">
+            <div class="up flex items-center gap-1">
+              <h3 class="font-bold hover:underline">CNN</h3>
+              <i class="ri-verified-badge-fill text-[#E2B719]"></i>
+              <p class="text-gray-500 hover:underline">@CNN</p>
+              <p class="text-gray-500">. 7h</p>
+            </div>
+
+            <div class="leftsec flex items-center">
+              <div
+                class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"></i>
+              </div>
+              <div
+                class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tweet Text -->
+          <p class="text-[15px] mt-1">
+            Lula says Flávio is a "jinx" and that the senator went to the US
+            to seek "protection"
+          </p>
+
+          <!-- Tweet Image -->
+          <img src="cnnpic.jpg" alt="X user" class="cursor-pointer rounded-2xl w-full h-auto mt-3" />
+
+          <!-- Bottom Icons -->
+          <div class="endicons mt-3 flex items-center justify-between text-[#536470]">
+            <!-- Left Icons -->
+            <div class="flex items-center gap-8">
+              <div class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300">
+                  <i class="transition duration-300 ri-chat-1-line text-[18px]"></i>
+                </div>
+                <span class="text-[14px]">137</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300">
+                  <i class="transition duration-300 text-[18px] ri-arrow-up-down-line"></i>
+                </div>
+                <span class="text-[14px]">43</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300">
+                  <i class="transition duration-300 ri-heart-line text-[17px]"></i>
+                </div>
+                <span class="text-[14px]">1K</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300">
+                  <i class="transition duration-300 ri-bar-chart-line text-[17px]"></i>
+                </div>
+                <span class="text-[14px]">627K</span>
+              </div>
+            </div>
+
+            <!-- Right Icons -->
+            <div class="flex items-center gap-1">
+              <div
+                class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"></i>
+              </div>
+              <div
+                class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4 ">
+      <div class="userinfo p-3 flex gap-3 relative">
+        <!-- Profile Image -->
+        <img src="bbc.jpg" alt="X user"
+          class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-sm w-10 h-10 shrink-0" />
+
+        <!-- Content Area -->
+        <div class="flex-1">
+          <!-- Top Row (Name, Username, Time, Icons) -->
+          <div class="flex justify-between items-start w-full">
+            <div class="up flex items-center gap-1">
+              <h3 class="font-bold hover:underline">BBC Breaking News</h3>
+              <i class="ri-verified-badge-fill text-[#E2B719]"></i>
+              <p class="text-gray-500 hover:underline">@BBC breaking</p>
+              <p class="text-gray-500">. 22h</p>
+            </div>
+
+            <div class="leftsec flex items-center">
+              <div
+                class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"></i>
+              </div>
+              <div
+                class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tweet Text -->
+          <p class="text-[15px] mt-1">
+            US President Donald Trump names Stephen Miller as new White House chief of staff after Republicans suffer
+            heavy midterm losses
+          </p>
+
+          <!-- Tweet Image -->
+          <img src="secondcnn.jpg" alt="X user" class="cursor-pointer rounded-2xl w-full h-auto mt-3" />
+
+          <!-- Bottom Icons -->
+          <div class="endicons mt-3 flex items-center justify-between text-[#536470]">
+            <!-- Left Icons -->
+            <div class="flex items-center gap-8">
+              <div class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300">
+                  <i class="transition duration-300 ri-chat-1-line text-[18px]"></i>
+                </div>
+                <span class="text-[14px]">288</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300">
+                  <i class="transition duration-300 text-[18px] ri-arrow-up-down-line"></i>
+                </div>
+                <span class="text-[14px]">216</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300">
+                  <i class="transition duration-300 ri-heart-line text-[17px]"></i>
+                </div>
+                <span class="text-[14px]">562</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300">
+                  <i class="transition duration-300 ri-bar-chart-line text-[17px]"></i>
+                </div>
+                <span class="text-[14px]">712K</span>
+              </div>
+            </div>
+
+            <!-- Right Icons -->
+            <div class="flex items-center gap-1">
+              <div
+                class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"></i>
+              </div>
+              <div
+                class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" transition duration-300 cursor-pointer user hover:bg-[#F7F7F7] w-140 min-h-103 pb-4">
+      <div class="userinfo p-3 flex gap-3 relative">
+        <!-- Profile Image -->
+        <img src="ai.jpg" alt="X user"
+          class="object-cover transition duration-300 hover:brightness-90 cursor-pointer rounded-full w-10 h-10 shrink-0" />
+
+        <!-- Content Area -->
+        <div class="flex-1">
+          <!-- Top Row (Name, Username, Time, Icons) -->
+          <div class="flex justify-between items-start w-full">
+            <div class="up flex items-center gap-1">
+              <h3 class="font-bold hover:underline">Ai Video Explorer</h3>
+              <i class="ri-verified-badge-fill text-blue-600"></i>
+              <p class="text-gray-500 hover:underline">@AiVideoEx</p>
+              <p class="text-gray-500">. 7h</p>
+            </div>
+
+            <div class="leftsec flex items-center">
+              <div
+                class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="ri-grok-ai-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"></i>
+              </div>
+              <div
+                class="group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="ri-more-line text-xl text-gray-700 transition duration-300 group-hover:text-blue-500"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tweet Text -->
+          <p class="text-[15px] mt-1">
+          <p> Calm Ambient — Four Seasons Drift Through a Tiny Valley </p>
+          <br>
+
+          Calm ambient slow TV: three minutes drifting through one tiny valley as spring, summer, autumn and winter pass
+          by.
+          </p>
+
+          <!-- Tweet Image -->
+          <img src="aii.jpg" alt="X user" class="cursor-pointer rounded-2xl w-full h-auto mt-3" />
+
+          <!-- Bottom Icons -->
+          <div class="endicons mt-3 flex items-center justify-between text-[#536470]">
+            <!-- Left Icons -->
+            <div class="flex items-center gap-8">
+              <div class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300">
+                  <i class="transition duration-300 ri-chat-1-line text-[18px]"></i>
+                </div>
+                <span class="text-[14px]">17</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-[#00BA7C] cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#DDF0EA] transition duration-300">
+                  <i class="transition duration-300 text-[18px] ri-arrow-up-down-line"></i>
+                </div>
+                <span class="text-[14px]">433</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-[#F84C9C] cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-[#F6DFEA] transition duration-300">
+                  <i class="transition duration-300 ri-heart-line text-[17px]"></i>
+                </div>
+                <span class="text-[14px]">4K</span>
+              </div>
+
+              <div class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition duration-300">
+                <div
+                  class="group h-8 w-8 flex items-center justify-center rounded-full hover:bg-blue-100 transition duration-300">
+                  <i class="transition duration-300 ri-bar-chart-line text-[17px]"></i>
+                </div>
+                <span class="text-[14px]">67K</span>
+              </div>
+            </div>
+
+            <!-- Right Icons -->
+            <div class="flex items-center gap-1">
+              <div
+                class="bookmark group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-bookmark-line"></i>
+              </div>
+              <div
+                class="upload group h-8 w-8 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-blue-100">
+                <i class="transition duration-300 text-[18px] group-hover:text-blue-500 ri-upload-2-line"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="third absolute top-2   left-230 z-10 bg-white ">
+
+<!-- Wrapper div with Sticky classes -->
+<div class="sticky top-0 z-50 bg-white py-2">
+  
+  <div class="relative w-95">
+    <!-- Search Icon -->
+    <i class="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-lg"></i>
+
+    <!-- Input Field -->
+    <input 
+      type="text" 
+      placeholder="Search" 
+      class="w-full border border-[#CFD9DE] bg-white text-gray-900 placeholder-gray-500 rounded-full py-2.5 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-[#1D9BF0] focus:bg-white transition duration-300 focus:border-[#1D9BF0] caret-[#1D9BF0] focus-visible:ring-1 focus-visible:ring-[#1D9BF0]" 
+    />
+  </div>
+
+</div>
+
+
+    <div class="premium flex flex-col gap-3  h-45 w-95 rounded-2xl border border-[#CFD9DE] p-4 mt-5">
+      <h1 class="text-[20px] font-bold">Subscribe to Premium</h1>
+      <span>Get rid of ads, see your analytics, boost your replies and unlock 20+ features.</span>
+      <button
+        class="h-9 mt-2 mr-40 text-base font-bold text-white transition duration-300 hover:bg-[#1A8CD8] rounded-full cursor-pointer w-30 bg-[#1D9BF0]">
+        Subscribe
+      </button>
+
+
+    </div>
+
+
+    <div class="todasy news flex flex-col gap-6  w-95 rounded-2xl border border-[#CFD9DE] p-4 mt-5">
+
+
+      <div class="flex justify-between items-center w-full">
+        <h1 class="text-[20px] font-bold">Today's News</h1>
+
+        <div
+          class="h-7 w-7 flex items-center justify-center rounded-full cursor-pointer transition duration-300 hover:bg-gray-200">
+          <i class="text-xl ri-close-line"></i>
+        </div>
+      </div>
+
+      <div
+        class="nivids flex flex-col gap-2 w-full hover:bg-[#F7F7F7] transition duration-300 cursor-pointer ">
+        <h4 class=" text-[16px] font-bold">NVIDIA Founder Jensen Huang Offers to
+          Return as CEO Amid Probe and Staff...
+        </h4>
+        <p class="text-[13px] text-[#536471]">1 day ago · News · 207.2K posts</p>
+
+      </div>
+
+     
+
+    </div>
+  </div>
+</body>
+
 </html>
